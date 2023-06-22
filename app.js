@@ -10,10 +10,14 @@ inputNum.addEventListener('input', leerNum, false);
 
 let botonEnviar = document.getElementById('enviarNum');
 botonEnviar.addEventListener('click', aleatorio, false);
-botonEnviar.addEventListener('click', adivinanza, false);
+
 
 let numeroAleatorio;
 let numeroIngresado;
+
+function leerNum(evt){
+    numeroIngresado = parseInt(evt.target.value);
+}
 
 function aleatorio() {
     let i = true;
@@ -24,10 +28,7 @@ function aleatorio() {
             i = false ;
         }
     }
-}
-
-function leerNum(evt){
-    numeroIngresado = parseInt(evt.target.value);
+    adivinanza();
 }
 
 function adivinanza () {
